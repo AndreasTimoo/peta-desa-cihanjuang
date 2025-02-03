@@ -26,7 +26,7 @@
                     style: function(feature) {
                         var jumlah = feature.properties["tabulasi_Jumlah Pasien Klinik Ar-Rahim (No. telp)"];
                         var warna = jumlah > 100 ? 'red' : jumlah > 50 ? 'orange' : 'green';
-                        return { color: warna, weight: 2 };
+                        return { color: warna, weight: 2, fillColor: warna, fillOpacity: 0.5 };
                     },
                     onEachFeature: function(feature, layer) {
                         layer.bindPopup(`<b>Jumlah Pasien:</b> ${feature.properties["tabulasi_Jumlah Pasien Klinik Ar-Rahim (No. telp)"]}`);
@@ -37,3 +37,4 @@
     </script>
 </body>
 </html>
+
